@@ -20,3 +20,4 @@
 
 .env file in the root
 FAST_REFRESH=FALSE
+#### Live link https://comfy-sloth-pr.netlify.app/
