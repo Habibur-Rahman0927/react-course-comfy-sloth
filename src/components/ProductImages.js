@@ -5,6 +5,7 @@ const ProductImages = ({ images = [{ url: '' }] }) => {
   const [main, setMain] = useState(images[0])
   console.log(main)
   return <Wrapper>
+    {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
     <img src={main.url} alt="main image" className="main" />
     <div className="gallery">
       {images.map((image, index) => {

@@ -5,7 +5,6 @@ const UserContext = React.createContext()
 export const UserProvider = ({ children }) => {
   const {
     isAuthenticated,
-    isLoading,
     user,
     loginWithRedirect, logout } = useAuth0();
 
@@ -16,6 +15,7 @@ export const UserProvider = ({ children }) => {
     } else {
       setMyUser(false)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuthenticated])
   return (
     <UserContext.Provider value={{ loginWithRedirect, logout, myUser }}>{children}</UserContext.Provider>
